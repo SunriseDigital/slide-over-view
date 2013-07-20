@@ -1,6 +1,26 @@
 ;(function($){
 "use strict";
 
+
+function disableScroll(){
+	var body = $('body');
+
+	body.css('overflow', 'hidden');
+
+	body.bind('touchmove', function(e){
+		e.preventDefault();
+		return false;
+	});
+}
+
+function enableScroll(){
+	var body = $('body');
+
+	body.css('overflow', 'auto');
+
+	body.unbind('touchmove');
+}
+
 $.fn.extend({
     slideOverView: function(options){
 		return this.each(function(){
@@ -32,8 +52,7 @@ $.fn.extend({
 				view.toggleClass('sovHide sovShow sovAnimating');
 				if(view.hasClass('sovHide')){
 					wrap.hide();
-				} else {
-					op.body.hide();
+					enableScroll();
 				}
 			});
 
@@ -42,6 +61,8 @@ $.fn.extend({
 					if(view.hasClass('sovAnimating')){
 						return;
 					}
+
+					disableScroll();
 
 					var windowRect = Rect.window.rect();
 
@@ -62,7 +83,6 @@ $.fn.extend({
 							}, 0);
 						}, 0);
 					} else {
-						op.body.show();
 						wrap.css('top', windowRect.offset.top + windowRect.size.height + 1 +'px');
 					}
 				}
