@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Slide Over View</title>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="../lib/jquery.slide-over-view.js"></script>
+	<script>
+		$(function(){
+
+			var view = $('.slideOverView');
+
+			view.slideOverView({
+				body: $("#wrapper")
+			});
+
+			
+			var slideOverView = view.data('slideOverView');
+			$('.openDialog, .close').click(function(){
+				slideOverView.toggle();
+
+				return false;
+			});
+		});
+	</script>
+	<style>
+		body {
+		  -webkit-text-size-adjust: 100%;
+		  padding: 0;
+		  margin: 0;
+		}
+
+		.slideOverView{
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="slideOverView">
+			<div><a href="#" class="close">Close</a></div>
+			<ul>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+				<li>Some Item</li>
+			</ul>
+		</div>
+		<ul>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+			<li><a href="#" class="openDialog">open</a></li>
+		</ul>
+	</div>
+</body>
+</html>
