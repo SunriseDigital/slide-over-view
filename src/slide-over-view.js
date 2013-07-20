@@ -6,6 +6,7 @@ $.fn.extend({
 		return this.each(function(){
 			var view = $(this);
 			var op = $.extend({}, options);
+			var duration = '700ms';
 
 			var wrap = $('<div class="slideOverView"></div>')
 				.appendTo('body')
@@ -13,8 +14,9 @@ $.fn.extend({
 				.css({
 					position : 'absolute',
 					overflow: 'auto',
-					transitionProperty: 'top',
+					transitionDuration: duration,
 					transitionDelay: 0,
+					transitionTimingFunction: 'liner',
 					left: '0',
 					zIndex: '9999'
 				})
@@ -27,7 +29,6 @@ $.fn.extend({
 				;
 
 			var body = $("body");
-			var duration = '1s';
 			wrap.bind('transitionend webkitTransitionEnd', function(){
 				view.toggleClass('sovHide sovShow sovAnimating');
 				if(view.hasClass('sovHide')){
@@ -51,19 +52,20 @@ $.fn.extend({
 
 					view.addClass('sovAnimating');
 
+					var startY = windowRect.size.height + 1;
+
 					if(view.hasClass('sovHide')){
-						wrap.css('transition-duration', 0);
+						// wrap.css('transition-duration', 0);
 						setTimeout(function(){
-							wrap.css('top', windowRect.offset.top + windowRect.size.height + 1 +'px');
 							wrap.show();
-							wrap.css('transition-duration', duration);
+							wrap.css('top', startY + 'px');
 							setTimeout(function(){
-								wrap.css('top', windowRect.offset.top + "px");
-							}, 0);
+								wrap.css('transform', 'translateY(-'+ startY +'px)');
+							}, 100);
 						}, 0);
 					} else {
 						op.body.show();
-						wrap.css('top', windowRect.offset.top + windowRect.size.height + 1 +'px');
+						wrap.css('transform', 'none');
 					}
 				}
 			});
