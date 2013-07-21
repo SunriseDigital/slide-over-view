@@ -19,5 +19,5 @@
 }
 
 .sovTransition{
-	@include transition(all 400ms linear 0s);
+	@include transition(all 300ms ease 0s);
 }

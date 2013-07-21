@@ -37,9 +37,22 @@ $.fn.extend({
 				;
 
 			var body = $("body");
+			Rect.window.scroll(function(){
+				if(!wrap.hasClass('sovHide')){
+					wrap.hide();
+					wrap.removeClass('sovTransition');
+					wrap.addClass('sovNoTransition');
+					wrap.addClass('sovHide');
+					wrap.removeClass('sovAnimating');
+					enableScroll();
+					setTimeout(function(){
+						wrap.css('transform', 'none');
+					}, 0);
+				}
+			});
 			wrap.bind('transitionend webkitTransitionEnd', function(){
 				console.log('trasend');
-				wrap.toggleClass('sovHide sovShow');
+				wrap.toggleClass('sovHide');
 				if(wrap.hasClass('sovHide')){
 					wrap.removeClass('sovTransition');
 					wrap.addClass('sovNoTransition');
