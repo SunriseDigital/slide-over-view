@@ -1,0 +1,23 @@
+@mixin transition($args){
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+
+.sovWrapper{
+	position: absolute;
+	overflow: auto;
+	z-index: 9999;
+	left: 0;
+	background-color: #FFF;
+}
+
+.sovNoTransition{
+	@include transition(none);
+}
+
+.sovTransition{
+	@include transition(all 400ms linear 0s);
+}

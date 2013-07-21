@@ -6,14 +6,13 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="../lib/jquery.slide-over-view.js"></script>
+	<link rel="stylesheet" href="../lib/slide-over-view.min.css">
 	<script>
 		$(function(){
 
 			var view = $('.slideOverView');
 
-			view.slideOverView({
-				body: $("#wrapper")
-			});
+			view.slideOverView();
 
 			
 			var slideOverView = view.data('slideOverView');
