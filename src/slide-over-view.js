@@ -39,7 +39,7 @@ function enableTransition(elem, callback){
 function moveTo(elem, offset, callback){
 	elem.offset(offset);
 	if(callback){
-		setTimeout(callback, 1);
+		setTimeout(callback, 10);
 	}
 }
 
@@ -71,7 +71,8 @@ $.fn.extend({
 					disableTransition(wrap, function(){
 						op.body.hide();
 						wrap.offset({top:0, left:0});
-						Rect.window.scrollTop(0);
+						//Rect.window.scrollTop(0);
+						window.scrollTo(0,1);
 					});
 				}
 

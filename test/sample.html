@@ -9,11 +9,10 @@
 	<link rel="stylesheet" href="../lib/slide-over-view.min.css">
 	<script>
 		$(function(){
+			window.scrollTo(0,1);
 
 			var view = $('.slideOverView');
-
 			view.slideOverView({body:$("#wrapper")});
-
 			
 			var slideOverView = view.data('slideOverView');
 			$('.openDialog, .close').click(function(){
