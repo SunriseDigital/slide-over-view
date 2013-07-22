@@ -20,6 +20,29 @@ function enableScroll(){
 	body.unbind('touchmove');
 }
 
+function disableTransition(elem, callback){
+	elem.removeClass('sovTransition');
+	elem.addClass('sovNoTransition');
+	if(callback){
+		setTimeout(callback, 0);
+	}
+}
+
+function enableTransition(elem, callback){
+	elem.removeClass('sovNoTransition');
+	elem.addClass('sovTransition');
+	if(callback){
+		setTimeout(callback, 0);
+	}
+}
+
+function moveTo(elem, offset, callback){
+	elem.offset(offset);
+	if(callback){
+		setTimeout(callback, 1);
+	}
+}
+
 $.fn.extend({
     slideOverView: function(options){
 		return this.each(function(){
@@ -36,28 +59,20 @@ $.fn.extend({
 				.width('100%')
 				;
 
-			var body = $("body");
-			Rect.window.scroll(function(){
-				if(!wrap.hasClass('sovHide')){
-					wrap.hide();
-					wrap.removeClass('sovTransition');
-					wrap.addClass('sovNoTransition');
-					wrap.addClass('sovHide');
-					wrap.removeClass('sovAnimating');
-					enableScroll();
-					setTimeout(function(){
-						wrap.css('transform', 'none');
-					}, 0);
-				}
-			});
 			wrap.bind('transitionend webkitTransitionEnd', function(){
 				console.log('trasend');
 				wrap.toggleClass('sovHide');
 				if(wrap.hasClass('sovHide')){
-					wrap.removeClass('sovTransition');
-					wrap.addClass('sovNoTransition');
-					enableScroll();
+					disableTransition(wrap);
 					wrap.hide();
+				} else {
+					wrap.data('sovPrevOffset', wrap.offset());
+
+					disableTransition(wrap, function(){
+						op.body.hide();
+						wrap.offset({top:0, left:0});
+						Rect.window.scrollTop(0);
+					});
 				}
 
 				wrap.removeClass('sovAnimating');
@@ -70,31 +85,37 @@ $.fn.extend({
 						return;
 					}
 
-					disableScroll();
-
-					var windowRect = Rect.window.rect();
-
-					wrap
-						.width(windowRect.size.width)
-						.height(windowRect.size.height);
-
+					wrap.width('100%');
 					wrap.addClass('sovAnimating');
 
 					if(wrap.hasClass('sovHide')){
-						wrap.show();
-						var startOffset = {top: windowRect.offset.top + windowRect.size.height + 1, left:0};
-						wrap.offset(startOffset);
+						var windowRect = Rect.window.rect();
 
-						setTimeout(function(){
-							wrap.removeClass('sovNoTransition');
-							wrap.addClass('sovTransition');
-							setTimeout(function(){
+						wrap
+							.height(windowRect.size.height)
+							.data('sovWindowRect', windowRect)
+							.show();
+
+						var startOffset = {top: windowRect.offset.top + windowRect.size.height + 1, left:0};
+						moveTo(wrap, startOffset, function(){
+							enableTransition(wrap, function(){
 								var targetY = windowRect.size.height + 1;
 								wrap.css('transform', 'translateY(-'+ targetY +'px)');
-							}, 0);
-						}, 100);
+							});
+						});
 					} else {
-						wrap.css('transform', 'none');
+						var prevOffset = wrap.data('sovPrevOffset');
+
+						op.body.show();
+
+						if(prevOffset){
+							moveTo(wrap, prevOffset, function(){
+								Rect.window.scrollTop(wrap.data('sovWindowRect').offset.top);
+								enableTransition(wrap, function(){
+									wrap.css('transform', 'none');
+								});
+							});
+						}
 					}
 				}
 			});
