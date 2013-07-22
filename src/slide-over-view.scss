@@ -5,12 +5,13 @@
 	transition: $args;
 }
 
-
 .sovWrapper{
 	position: absolute;
 	z-index: 9999;
 	left: 0;
 	background-color: #FFF;
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
 }
 
 .sovNoTransition{
